@@ -1,3 +1,80 @@
+.navbar {
+    /* Estilos de tu barra de navegación */
+    display: flex;
+    position: fixed; /* Necesario para que z-index funcione correctamente */
+    z-index: 4; /* Asegúrate de que el encabezado no esté obstruyendo el menú */
+    justify-content: center;
+    align-items: center;
+        top: 0;
+    left: 0;
+    right: 0;
+    transition: top 0.3s;
+}
+
+.nav-list {
+    list-style-type: none; /* Elimina los marcadores de lista */
+    padding: 0; /* Elimina el padding por defecto */
+    display: flex; /* Usa flexbox para los elementos de la lista */
+    gap: 20px; /* Espacio entre los elementos de la lista */
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    z-index: 2; /* Un valor más alto para asegurarte de que esté por encima del fondo */
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+@media screen and (max-width: 800px) {
+    .nav-list {
+        display: none;
+        position: absolute;
+       top: 34px; /* Ajusta esto según la altura de tu barra de navegación */
+        left: 0;
+        right: 0;
+        background-color: rgba(50, 50, 50, 0.95); /* Añade un color de fondo si es necesario */
+        text-align: left; /* Alinea el texto a la izquierda si prefieres */
+        z-index: 3; /* Asegúrate de que esté sobre otros elementos */
+    }
+    .menu-toggle .bar {
+        background-color: rgba(180, 180, 180, 1) !important;
+    }
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-list.active {
+        display: block;
+    }
+
+    .nav-list.active {
+        display: block; /* Muestra la lista cuando el menú está activo */
+    }
+
+    .nav-list li {
+        display: block; /* Cada elemento de la lista ocupa toda la línea */
+        padding: 10px; /* Espacio alrededor de cada elemento de la lista */
+        border-bottom: 1px solid rgba(100, 100, 100, 0.95); /* Opcional: añade un borde para separar los elementos */
+    }
+
+    .nav-list li:last-child {
+        border-bottom: none; /* Elimina el borde del último elemento */
+    }
+
+    .nav-list li a {
+        display: block; /* Ocupa todo el espacio del elemento <li> para facilitar la selección */
+    }
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
