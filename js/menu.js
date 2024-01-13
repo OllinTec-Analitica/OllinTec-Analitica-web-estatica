@@ -27,6 +27,8 @@ window.addEventListener("scroll", function() {
 
         if (currentScroll > lastScrollTop) {
             document.getElementById("navbar").style.top = "-80px";
+            // Si estás usando un menú de hamburguesas, también querrás ocultar la lista de navegación
+            document.getElementById("nav-list").classList.remove('active');
         } else {
             document.getElementById("navbar").style.top = "0";
         }
