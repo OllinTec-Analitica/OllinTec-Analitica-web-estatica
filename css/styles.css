@@ -38,6 +38,8 @@
 
 .navbar-brand {
     display: flex;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: inherit; /* Mantiene el color del texto igual al del resto de la navegación */
     align-items: center; /* Alinea el logo y el texto verticalmente */
     padding-right: 50px;
 }
@@ -102,7 +104,8 @@
     }
     #logo {
         position: absolute;
-        left: 10px; 
+        left: 10px;
+        z-index: 3;
     }
     .nav-list {
         display: none;
