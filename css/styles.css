@@ -5,10 +5,12 @@
     z-index: 4; /* Asegúrate de que el encabezado no esté obstruyendo el menú */
     justify-content: center;
     align-items: center;
-        top: 0;
+    top: 0;
     left: 0;
     right: 0;
     transition: top 0.3s;
+    align-items: center; /* Centra los elementos verticalmente */
+    /* ... otros estilos que puedas necesitar ... */
 }
 
 .nav-list {
@@ -34,7 +36,74 @@
     background-color: #101010;
 }
 
-@media screen and (max-width: 800px) {
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Alinea el logo y el texto verticalmente */
+    padding-right: 50px;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column; /* Organiza 'OllinTec' y 'Analítica' en columnas */
+    text-align: right; /* Alinea el texto a la derecha */
+}
+
+.divider {
+    height: 40px; /* Altura de la barra */
+    width: 2px; /* Ancho de la barra */
+    background-color: #657889; /* Color de la barra */
+    margin-left: 20px; /* Espacio a la izquierda de la barra */
+    margin-right: 20px; /* Espacio a la derecha de la barra */
+}
+
+#logo {
+    height: 40px; /* o el tamaño que prefieras */
+    width: auto; /* para mantener la proporción de la imagen */
+}
+
+#ollin {
+    color: #b8c5c9;
+    size: 20px;
+}
+
+#tec {
+    color: #81a6be;
+}
+
+#ollintec {
+    flex-direction: row;
+    font-size: 26px;
+}
+
+#analitica {
+    font-size: 12px;
+}
+
+@media screen and (max-width: 1000px) {
+    .brand-text, .divider {
+        display: none;
+    }
+
+    #logo {
+        padding-right: 0px;
+        height: 30px; /* o el tamaño que prefieras */
+        width: auto; /* para mantener la proporción de la imagen */
+    }
+    .navbar-brand {
+        display: flex;
+        align-items: center; /* Alinea el logo y el texto verticalmente */
+        padding-right: 15px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .navbar {
+        justify-content: space-between;
+    }
+    #logo {
+        position: absolute;
+        left: 10px; 
+    }
     .nav-list {
         display: none;
         position: absolute;
@@ -50,6 +119,8 @@
     }
     .menu-toggle {
         display: block;
+        text-align: center;
+        flex-grow: 1
     }
 
     .nav-list.active {
@@ -73,6 +144,11 @@
     .nav-list li a {
         display: block; /* Ocupa todo el espacio del elemento <li> para facilitar la selección */
     }
+    
+    .navbar-brand {
+       /* flex-direction: row; /* En pantallas pequeñas, el logo y texto deben estar en fila */
+        justify-content: flex-start; /* Alinea el logo a la izquierda en pantallas pequeñas */
+    }
 }
 
 body {
@@ -86,7 +162,7 @@ body {
     background-image: url('../img/header-image.png');
     height: 300px;
     background-size: cover;
-    background-position: center center; /* Centra la imagen */
+    background-position: center; /* Centra la imagen */
     background-repeat: no-repeat;       /* Evita la repetición de la imagen */
 }
 .header-image::before {
@@ -190,7 +266,7 @@ footer {
 .service-box h3 {
     color: #333; /* Color del título del servicio */
     margin-top: 0;
-     text-align: center;
+    text-align: center;
     z-index: 3;
 }
 
@@ -222,7 +298,7 @@ footer {
 }
 
 #services h2{
-    color: white;^
+    color: white;
 }
 
 #contact::before {
@@ -237,5 +313,5 @@ footer {
 }
 
 #contact h2{
-    color: white;^
+    color: white;
 }
