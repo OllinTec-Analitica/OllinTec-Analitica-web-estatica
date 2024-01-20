@@ -154,6 +154,8 @@
     }
 }
 
+/*======================================================================================================================*/
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -218,17 +220,6 @@ footer {
     padding: 10px 0;
 }
 
-.section-background::before {
-    content: '';
-    position: absolute; /* Posición fija para el efecto de fondo estático */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.95); /* Ajusta la transparencia según sea necesario */
-    z-index: 2;
-}
-
 .section-background {
     background-image: url('../img/about-us-image.png');
     background-size: cover;
@@ -245,6 +236,31 @@ footer {
     padding: 20px;
     margin: 0 auto;
     max-width: 800px; /* Ajusta según el diseño deseado */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+     z-index: 1; /* Asegúrate de que el overlay esté por encima del contenido */
+    backdrop-filter: blur(5px);
+}
+
+#about-overlay{
+    --color-fondo-overlay: rgba(255, 255, 255, 0.90);
+    background-color: var(--color-fondo-overlay); /* Color y opacidad del overlay */
+}
+
+#team-overlay{
+    --color-fondo-overlay: rgba(190, 230, 255, 0.91);
+    background-color: var(--color-fondo-overlay); /* Color y opacidad del overlay */
+}
+
+#service-overlay{
+    --color-fondo-overlay: rgba(100, 100, 100, 0.89);
+    background-color: var(--color-fondo-overlay); /* Color y opacidad del overlay */
 }
 
 .service-container {
@@ -278,41 +294,18 @@ footer {
     margin-bottom: 10px; /* Espacio entre el ícono y el título */
 }
 
-#team::before {
-    content: '';
-    position: absolute; /* Posición fija para el efecto de fondo estático */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(190, 230, 255, 0.94); /* Ajusta la transparencia según sea necesario */
-    z-index: 2;
-}
-
-#services::before {
-    content: '';
-    position: absolute; /* Posición fija para el efecto de fondo estático */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(100, 100, 100, 0.93); /* Ajusta la transparencia según sea necesario */
-    z-index: 2;
-}
-
 #services h2{
     color: white;
 }
 
-#contact::before {
-    content: '';
-    position: absolute; /* Posición fija para el efecto de fondo estático */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(80, 80, 80, 0.99); /* Ajusta la transparencia según sea necesario */
-    z-index: 2;
+#case-studies-overlay{
+    --color-fondo-overlay: rgba(255, 255, 255, 0.90);
+    background-color: var(--color-fondo-overlay); /* Color y opacidad del overlay */
+}
+
+#contact-overlay{
+    --color-fondo-overlay: rgba(80, 80, 80, 0.97);
+    background-color: var(--color-fondo-overlay); /* Color y opacidad del overlay */
 }
 
 #contact h2{
