@@ -30,6 +30,7 @@ padding-bottom: 18px;
 margin: 0px;
 border: 1px solid transparent; /* Borde inicial transparente */
     transition: border-color 0.3s; /* Transición suave del color del borde */
+    transition: background-color 0.3s; /* Transición suave del color del borde */
 }
 
 .menu-toggle {
