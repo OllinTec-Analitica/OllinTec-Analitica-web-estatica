@@ -11,13 +11,25 @@
     transition: top 0.3s;
     align-items: center; /* Centra los elementos verticalmente */
     /* ... otros estilos que puedas necesitar ... */
+    padding: 10px;
+    margin: 0px;
 }
 
 .nav-list {
     list-style-type: none; /* Elimina los marcadores de lista */
-    padding: 0; /* Elimina el padding por defecto */
     display: flex; /* Usa flexbox para los elementos de la lista */
-    gap: 20px; /* Espacio entre los elementos de la lista */
+    gap: 0px; /* Espacio entre los elementos de la lista */
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav-list a {
+padding: 10px; 
+padding-top: 18px;
+padding-bottom: 18px;
+margin: 0px;
+border: 1px solid transparent; /* Borde inicial transparente */
+    transition: border-color 0.3s; /* Transición suave del color del borde */
 }
 
 .menu-toggle {
@@ -81,7 +93,14 @@
     font-size: 12px;
 }
 
-@media screen and (max-width: 1000px) {
+.nav-item a:hover {
+    background-color: rgba(255, 255, 255, 0.053); /* Cambia el color de fondo del elemento del menú */
+    color: rgb(161, 197, 221); /* Cambia el color del texto */
+    border-radius: 5px; /* Añade bordes redondeados si lo deseas */
+    border-color: #4c5761;
+}
+
+@media screen and (max-width: 1050px) {
     .brand-text, .divider {
         display: none;
     }
@@ -96,9 +115,15 @@
         align-items: center; /* Alinea el logo y el texto verticalmente */
         padding-right: 15px;
     }
+    .nav-list a {
+        padding: 10px; 
+        padding-top: 12px;
+        padding-bottom: 12px;
+        margin: 0px;
+        }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
     .navbar {
         justify-content: space-between;
     }
@@ -110,7 +135,7 @@
     .nav-list {
         display: none;
         position: absolute;
-       top: 34px; /* Ajusta esto según la altura de tu barra de navegación */
+       top: 49px; /* Ajusta esto según la altura de tu barra de navegación */
         left: 0;
         right: 0;
         background-color: rgba(50, 50, 50, 0.95); /* Añade un color de fondo si es necesario */
