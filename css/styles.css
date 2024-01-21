@@ -29,8 +29,8 @@ padding-top: 18px;
 padding-bottom: 18px;
 margin: 0px;
 border: 1px solid transparent; /* Borde inicial transparente */
-    transition: border-color 0.3s; /* Transición suave del color del borde */
-    transition: background-color 0.3s; /* Transición suave del color del borde */
+    transition: border-color 0.3s;
+    transition: background-color 0.3s;
 }
 
 .menu-toggle {
@@ -139,7 +139,8 @@ border: 1px solid transparent; /* Borde inicial transparente */
        top: 49px; /* Ajusta esto según la altura de tu barra de navegación */
         left: 0;
         right: 0;
-        background-color: rgba(50, 50, 50, 0.95); /* Añade un color de fondo si es necesario */
+        background-color: rgba(50, 50, 50, 0.90); /* Añade un color de fondo si es necesario */
+        backdrop-filter: blur(15px);
         text-align: left; /* Alinea el texto a la izquierda si prefieres */
         z-index: 3; /* Asegúrate de que esté sobre otros elementos */
     }
