@@ -99,16 +99,56 @@
     <section id="contact" class="section-background">
         <div id="contact-overlay" class="overlay"></div>
         <div class="content">
-            <h2>Contacto</h2>
-            <p>Información de contacto...</p>
+            <h2>Contáctenos</h2>
+            <div id="contact-data-form">
+            <div id="contact-data">
+                <h3>Diálogo con Nuestros Equipo</h3>
+                <p>En OllinTec Analítica, estamos interesados en conocer las necesidades de análisis de datos de su organización y en explorar cómo podemos ser de ayuda. Para establecer contacto, se dispone de varias opciones: puede enviarnos un correo electrónico utilizando las direcciones que se muestran a continuación, comunicarse al número telefónico proporcionado, o, si lo prefiere, completar el formulario ubicado a la derecha. Nos comprometemos a responder en un plazo máximo de 24 horas.</p>
+                
+<div class="contact-info">
+    <p><i class="fas fa-envelope"></i> contacto@ollintecanalitica.com</p>
+    <p><i class="fas fa-envelope"></i> info@ollintecanalitica.com</p>
+    <p><i class="fas fa-phone"></i> (+521) 55-1187-2104</p>
+</div>
+            </div>
+            
+            <div class="form-container">
+                <form id="contact-form">
+                    <h3>Formulario de Contacto</h3>
+                    <div class="left-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre:<span>*</span></label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Por favor introduzca un nombre.">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:<span>*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Por favor introduzca un correo electrónico.">
+                        </div>
+                        <div class="form-group">
+                            <label for="numero">Número de Contacto (Opcional):</label>
+                            <input type="text" id="numero" name="numero" placeholder="Por ejemplo: +52 123 456 7890">
+                        </div>
+                    </div>
+                    <div class="right-form">
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje:<span>*</span></label>
+                            <textarea id="mensaje" name="mensaje" placeholder="Por favor, háganos saber cómo podemos asistirle..."></textarea>
+                        </div>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
         </div>
     </section>
+    
 
     <footer>
         <p>Derechos reservados © 2024 OllinTec Analítica</p>
     </footer>
     <script src="js/menu.js"></script>
     <script src="js/efecto-fondo.js"></script>
-</body>
+
+</body><script src="js/form-contacto.js"></script>
 </html>
 
