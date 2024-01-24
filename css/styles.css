@@ -421,13 +421,11 @@ input:hover, textarea:hover {
     }
 
     #contact-data {
-        width: 72%; /* Ancho del contenedor del formulario */
-        /*max-width: 470px;*/
+        width: calc(72% + 30px);
     }
 
     .form-container {
-        width: 72%; /* Ancho del contenedor del formulario */
-        /*max-width: 450px;*/
+        width: 72%;
     }
 }
 
@@ -484,10 +482,15 @@ input:hover, textarea:hover {
     }
 
     #contact-data {
-        width: 90%; /* Ancho del contenedor del formulario */
+        width:  calc(95% + 30px); 
+    }
+
+    .contact-info{
+        padding-left: 10px;
+        padding-bottom: 10px;
     }
 
     .form-container {
-        width: 90%; /* Ancho del contenedor del formulario */
+        width: 95%;
     }
 }
