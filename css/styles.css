@@ -21,6 +21,7 @@
     gap: 0px; /* Espacio entre los elementos de la lista */
     padding: 0px;
     margin: 0px;
+    position: relative;
 }
 
 .nav-list a {
@@ -101,6 +102,29 @@ border: 1px solid transparent; /* Borde inicial transparente */
     border-color: #4c5761;
 }
 
+.scroll-indicator {
+    display: none; /* inicialmente oculto */
+    text-align: center;
+    position: sticky;
+    width: calc(100% - 20px);
+    font-size: 22px;
+    margin-left: 18px;
+}
+
+.scroll-indicator i {
+    font-size: 26px;
+    color: rgba(161, 197, 221, 0.321);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.scroll-indicator.up {
+    top: 0; /* en la parte superior de la lista */
+}
+
+.scroll-indicator.down {
+    bottom: 0; /* en la parte inferior de la lista */
+}
 /*======================================================================================================================*/
 
 body {
@@ -482,15 +506,63 @@ input:hover, textarea:hover {
     }
 
     #contact-data {
-        width:  calc(95% + 30px); 
+        /*width:  calc(97% + 30px);*/
+        width: 95%;
     }
 
     .contact-info{
-        padding-left: 1%;
-        padding-right: 1%;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .form-container {
         width: 95%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 900px) and (max-height: 370px) {
+    .nav-list {
+        /* Limita la altura máxima de la lista */
+        max-height: 200px; /* Ajusta este valor según tus necesidades */
+        
+        /* Habilita el desplazamiento vertical si el contenido excede la altura máxima */
+        overflow-y: auto;
+    }
+
+    #scroll-down-indicator {
+        display: block; /* muestra los indicadores cuando la lista es desplazable*/
+    }
+}
+
+@media screen and (max-width: 450px) {
+    section {
+        padding:0px;
+    }
+
+    #contact-data-form{
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+
+    #contact-data {
+        width: 100%;
+    }
+
+    .contact-info{
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .form-container {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 }
